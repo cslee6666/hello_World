@@ -1,0 +1,33 @@
+def f2c(f):
+    return (f-32) * (5/9)
+
+# print(round(f2c(67), 1))
+
+# n = 307
+# k = len(str(n))
+# print(k)
+# c = 10**k  - 1 - n
+# print(c)
+
+def mpay(p, r, y):
+    m = y * 12
+    r2 = r / 100 / 12
+    c = (1 + r2) ** m
+    d = (c * p * r2) / (c -1)
+    return int(d)
+
+
+
+def mpay2(principal, interest, year):
+    rate_monthly = interest / 100 / 12
+    compound = (1 + rate_monthly) ** (year * 12)
+    return int(compound * principal * rate_monthly / (compound - 1))
+
+print(mpay2(10000000, 2.8, 4))
+print(mpay(10000000, 2.8, 4))
+
+m = 4 * 12
+c = (1 + 2.8) ** m
+#print(c)
+
+    
